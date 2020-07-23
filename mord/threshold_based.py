@@ -102,7 +102,7 @@ def threshold_fit(X, y, alpha, n_class, mode='AE',
     n_samples, n_features = X.shape
 
     # convert from c to theta
-    L = np.zeros((n_class - 1, n_class - 1))
+    L = np.zeros((int(n_class) - 1, int(n_class) - 1))
     L[np.tril_indices(n_class-1)] = 1.
 
     if mode == 'AE':
